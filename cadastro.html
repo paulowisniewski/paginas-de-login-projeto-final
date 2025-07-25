@@ -1,231 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style-register.css">
   <title>AgroMiz - Cadastro</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: "Segoe UI", sans-serif;
-    }
 
-    body {
-      background-color: #f9f9f9;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    .container {
-      background: #ffffff;
-      border-top: 8px solid #1f5b3c;
-      border-bottom: 8px solid #1f5b3c;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-      display: flex;
-      flex-direction: row;
-      overflow: visible;
-      max-width: 900px;
-      width: 100%;
-      position: relative;
-      z-index: 1;
-    }
-
-    .form-section {
-      flex: 1;
-      padding: 40px;
-      z-index: 2;
-      background: #fff;
-    }
-
-    .logo-box {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      margin-bottom: 30px;
-    }
-
-    .logo-row {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .logo-img {
-      height: 60px;
-      width: auto;
-      margin-top: -20px;
-      margin-left: -20px;
-    }
-
-    .logo-title {
-      color: #065a14ee;
-      font-size: 35px;
-      font-weight: bold;
-      margin-top: -20px;
-      margin-left: -10px;
-    }
-
-    .subtitle {
-      font-size: 14px;
-      color: #000000;
-      font-weight: bold;
-      margin-left: -10px;
-    }
-
-    .form-section h1 {
-      font-size: 24px;
-      margin-bottom: 30px;
-    }
-
-    label {
-      display: block;
-      margin-top: 15px;
-      font-weight: bold;
-      color: #333;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    input[type="password"] {
-      width: 100%;
-      padding: 12px;
-      margin-top: 5px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
-
-    .termos-botao {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: 20px;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .termos-botao .checkbox {
-      display: flex;
-      align-items: center;
-      flex: 1;
-    }
-
-    .termos-botao .checkbox input {
-      margin-right: 8px;
-    }
-
-    .termos-botao .checkbox label {
-      font-weight: normal;
-      font-size: 14px;
-      margin-top: -2px;
-    }
-
-    .termos-botao button {
-      width: 120px;
-      padding: 12px;
-      background-color: #215c3d;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 16px;
-      margin-top: 0px;
-    }
-
-    button:hover{
-        background-color: #2e7e53e3;
-    }
-
-    .image-section {
-      padding: 30px;
-      position: relative;
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      z-index: 3;
-    }
-
-    .image-section img {
-      max-width: 250px;
-      height: auto;
-      position: relative;
-      top: 115px;
-      z-index: 4;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .image-section {
-        order: -1;
-        padding-top: 10px;
-      }
-
-      .image-section img {
-        top: 30px;
-      }
-
-      .form-section {
-        padding: 30px 20px;
-      }
-
-      .logo-box {
-        align-items: center;
-      }
-
-      .termos-botao {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .termos-botao button {
-        width: 100%;
-      }
-    }
-  </style>
 </head>
 <body>
   <div class="container">
     <div class="form-section">
-      <!-- Logo e título -->
       <div class="logo-box">
         <div class="logo-row">
-          <img src="img/image 6.png" alt="Logo AgroMiz" class="logo-img" />
-          <div class="logo-title">AgroMiz</div>
+          <img src="img/image 6.png" alt="Logo AgroMiz" class="logo-img">
+          <h1 class="logo-title">AgroMiz</h1>
         </div>
-        <div class="subtitle">Boas-vindas ao FazendaGestor</div>
+        <p class="subtitle">Boas-vindas ao FazendaGestor</p>
       </div>
 
-      <h1>Registre-se</h1>
+      <h2>Registre-se</h2>
 
-      <label for="nome">Nome</label>
-      <input type="text" id="nome" placeholder="Nome do proprietário" />
+      <form>
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" placeholder="Nome do proprietário">
 
-      <label for="email">E-mail</label>
-      <input type="email" id="email" placeholder="E-mail" />
+        <label for="email">E-mail</label>
+        <input type="email" id="email" placeholder="E-mail">
 
-      <label for="senha">Senha</label>
-      <input type="password" id="senha" placeholder="Senha" />
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" placeholder="Senha">
 
-      <!-- Checkbox e botão lado a lado -->
-      <div class="termos-botao">
-        <div class="checkbox">
-          <input type="checkbox" id="termos" />
-          <label for="termos">Aceito os termos e condições</label>
+        <div class="termos-botao">
+          <div class="checkbox">
+            <input type="checkbox" id="termos">
+            <label for="termos">Aceito os termos e condições</label>
+          </div>
+          <button type="button" onclick="validarFormulario()">Próximo</button>
         </div>
-        <button onclick="validarFormulario()">Próximo</button>
-      </div>
+      </form>
     </div>
 
     <div class="image-section">
-      <img src="img/571dd391-3b9a-4fdb-a325-f98832f87cd7 1.png" alt="Ilustração de fazendeiro" />
+      <img src="img/571dd391-3b9a-4fdb-a325-f98832f87cd7 1.png" alt="Ilustração de fazendeiro">
     </div>
   </div>
 
@@ -241,7 +57,7 @@
         return;
       }
 
-      if (!email.endsWith("@gmail.com")) {
+      if (!email.includes("@") || !email.endsWith("@gmail.com")) {
         alert("O e-mail deve ser do tipo @gmail.com.");
         return;
       }
@@ -251,7 +67,6 @@
         return;
       }
 
-      // Se todas as validações passarem, redireciona para a próxima página
       window.location.href = "registro.html";
     }
   </script>
